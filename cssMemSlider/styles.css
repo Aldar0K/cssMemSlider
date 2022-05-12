@@ -1,0 +1,66 @@
+html {
+    font-size: 1em;
+}
+
+:root {
+    --color-primary: rgb(70, 105, 72);
+    /* --color-secondary: ; */
+    --color-hover: rgb(56, 74, 57);
+    --color-light: rgba(255, 255, 255, 0.95);
+    --color-dark: rgba(0, 0, 0, 0.7);
+    --color-background: rgb(106, 155, 109);
+}
+
+body {
+    font-family: 'Roboto', 'Times', sans-serif;
+    font-size: 1rem;
+    color: var(--color-light);
+    background-color: var(--color-background);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header__container {
+    padding: 1em;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.main__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 9.3125em);
+}
+
+.slider {
+    
+}
+
+.footer__container {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__data {
+    display: flex;
+    gap: 0.5em;
+    font-size: 1.4rem;
+}
+
+.icon {
+    fill: var(--color-light);
+    transition: all .3s;
+}
+
+.icon:hover {
+    fill: var(--color-hover);
+}
