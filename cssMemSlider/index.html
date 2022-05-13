@@ -21,12 +21,34 @@
     <main class="main">
         <div class="container main__container">
             <div class="slider">
-                <div class="slider__top">
-                    <div class="slider__image"></div>
+                <input class="radio" type="radio" name="radio" id="radio1" checked>
+                <input class="radio" type="radio" name="radio" id="radio2">
+                <input class="radio" type="radio" name="radio" id="radio3">
+                <input class="radio" type="radio" name="radio" id="radio4">
+
+                <div class="slider__list">
+                    <div class="slider__image s1"><img src="./assets/images/jpg/mem1.jpg" alt="mem-image"></div>
+                    <div class="slider__image"><img src="./assets/images/jpg/mem2.jpg" alt="mem-image"></div>
+                    <div class="slider__image"><img src="./assets/images/jpg/mem3.jpg" alt="mem-image"></div>
+                    <div class="slider__image"><img src="./assets/images/jpg/mem4.jpg" alt="mem-image"></div>
                 </div>
+
                 <div class="slider__bot">
-                    <div class="slider__text"></div>
-                    <div class="slider__controls"></div>
+                    <div class="slider__description">
+                        <div class="slider__text-container">
+                            <div class="slider__text s1">And dreams will follow you</div>
+                            <div class="slider__text">text2</div>
+                            <div class="slider__text">text3</div>
+                            <div class="slider__text">text4</div>
+                        </div>
+                    </div>
+
+                    <div class="slider__navigation">
+                        <label for="radio1" class="slider__control"></label>
+                        <label for="radio2" class="slider__control"></label>
+                        <label for="radio3" class="slider__control"></label>
+                        <label for="radio4" class="slider__control"></label>
+                    </div>
                 </div>
             </div>
         </div>
