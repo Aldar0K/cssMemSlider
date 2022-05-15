@@ -33,6 +33,7 @@ h1 {
 }
 
 .main__container {
+    padding: 0 1em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,8 +41,6 @@ h1 {
 }
 
 .slider {
-    /* width: 90%;
-    height: 90%; */
     overflow: hidden;
     border: .5em solid var(--color-primary);
 }
@@ -112,14 +111,10 @@ h1 {
     user-select: none;
 }
 
-.slider__control:hover {
-    transform: scale(1.125);
-}
-
 .slider__control > span {
     display: block;
     height: 1em;
-    width: 3em;
+    width: 70%;
     background-color: var(--color-secondary);
     border: 0.2em solid var(--color-secondary);
     border-radius: 1em;
@@ -128,6 +123,7 @@ h1 {
 
 .slider__control:hover > span {
     border-color: var(--color-hover);
+    transform: scale(1.125);
 }
 
 .slider__control:active > span {
@@ -178,4 +174,29 @@ h1 {
 
 .icon:hover {
     fill: var(--color-hover);
+}
+
+@media (max-width: 767px) {
+    .main__container {
+        height: calc(100vh - 7.3125em);
+    }
+    .header__container {
+        padding: .5em;
+    }
+    .main__container {
+        padding: 0 .5em;
+    }
+    .footer__container {
+        padding: .5em;
+    }
+    .slider__bot {
+        flex-direction: column-reverse;
+    }
+    .slider__navigation {
+        width: 50%;
+        margin-top: .5em;
+    }
+    .slider__description {
+        width: 90%;
+    }
 }
