@@ -98,7 +98,6 @@ h1 {
     width: 30%;
     display: flex;
     justify-content: center;
-    gap: .5em;
 }
 
 .slider__control {
