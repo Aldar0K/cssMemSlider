@@ -1,0 +1,220 @@
+html {
+    font-size: 1em;
+}
+
+:root {
+    --color-primary: rgb(70, 105, 72);
+    --color-secondary: rgb(136, 188, 140);
+    --color-hover: rgb(56, 74, 57);
+    --color-light: rgba(255, 255, 255, 0.95);
+    --color-dark: rgba(0, 0, 0, 0.7);
+    --color-background: rgb(106, 155, 109);
+}
+
+body {
+    height: 100%;
+    font-family: 'Roboto', 'Times', sans-serif;
+    font-size: 1rem;
+    color: var(--color-light);
+    background-color: var(--color-background);
+}
+
+.container {
+    max-width: 62.5em;
+    margin: 0 auto;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__container {
+    padding: 1em;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.main__container {
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: calc(100vh - 9.3125em); */
+}
+
+.slider {
+    overflow: hidden;
+    border: .5em solid var(--color-primary);
+}
+
+.slider__list {
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+.radio {
+    display: none;
+}
+
+.slider__image {
+    width: 25%;
+    transition: all .3s ease;
+}
+
+.slider__image img {
+    width: 100%;
+    height: 100%;
+}
+
+.slider__description {
+    width: 70%;
+    overflow: hidden;
+}
+
+.slider__text-container {
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+.slider__text {
+    padding: .5em;
+    width: 25%;
+    transition: all .3s ease;
+    font-size: 1.2rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__bot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__navigation {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.slider__control {
+    height: 3em;
+    width: 25%;
+    cursor: pointer;
+    transition: all .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.slider__control > span {
+    display: block;
+    height: 1em;
+    width: 70%;
+    background-color: var(--color-secondary);
+    border: 0.2em solid var(--color-secondary);
+    border-radius: 1em;
+    transition: all .3s ease;
+}
+
+.slider__control:hover > span {
+    border-color: var(--color-hover);
+    transform: scale(1.125);
+}
+
+.slider__control:active > span {
+    border-color: var(--color-primary);
+}
+
+#radio1:checked ~ .slider__bot > .slider__navigation > .btn1 > span,
+#radio2:checked ~ .slider__bot > .slider__navigation > .btn2 > span,
+#radio3:checked ~ .slider__bot > .slider__navigation > .btn3 > span,
+#radio4:checked ~ .slider__bot > .slider__navigation > .btn4 > span {
+    background-color: transparent;
+}
+
+#radio1:checked ~ .slider__list > .i1,
+#radio1:checked ~ .slider__bot > .slider__description > .slider__text-container > .t1 {
+    margin-left: 0;
+}
+#radio2:checked ~ .slider__list > .i1,
+#radio2:checked ~ .slider__bot > .slider__description > .slider__text-container > .t1 {
+    margin-left: -25%;
+}
+#radio3:checked ~ .slider__list > .i1,
+#radio3:checked ~ .slider__bot > .slider__description > .slider__text-container > .t1 {
+    margin-left: -50%;
+}
+#radio4:checked ~ .slider__list > .i1,
+#radio4:checked ~ .slider__bot > .slider__description > .slider__text-container > .t1 {
+    margin-left: -75%;
+}
+
+.footer__container {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__data {
+    display: flex;
+    gap: 0.5em;
+    font-size: 1.4rem;
+}
+
+.icon {
+    fill: var(--color-light);
+    transition: all .3s;
+}
+
+.icon:hover {
+    fill: var(--color-hover);
+}
+
+@media (max-width: 767px) {
+    .main__container {
+        /* height: calc(100vh - 7.3125em); */
+    }
+    .header__container {
+        padding: .5em;
+    }
+    .main__container {
+        padding: 0 .5em;
+    }
+    .footer__container {
+        padding: .5em;
+    }
+    .slider__bot {
+        flex-direction: column-reverse;
+    }
+    .slider__navigation {
+        width: 50%;
+        margin-top: .5em;
+    }
+    .slider__description {
+        width: 90%;
+    }
+}
+
+@media (max-width: 319px) {
+    .footer__container {
+        flex-direction: column-reverse;
+        gap: 0.5em;
+    }
+}
