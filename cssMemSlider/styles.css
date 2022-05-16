@@ -25,7 +25,7 @@ body {
 }
 
 .wrapper {
-    /* min-height: 100%; */
+    min-height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -209,5 +209,12 @@ h1 {
     }
     .slider__description {
         width: 90%;
+    }
+}
+
+@media (max-width: 319px) {
+    .footer__container {
+        flex-direction: column-reverse;
+        gap: 0.5em;
     }
 }
