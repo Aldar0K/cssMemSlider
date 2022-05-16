@@ -12,6 +12,7 @@ html {
 }
 
 body {
+    height: 100%;
     font-family: 'Roboto', 'Times', sans-serif;
     font-size: 1rem;
     color: var(--color-light);
@@ -23,6 +24,12 @@ body {
     margin: 0 auto;
 }
 
+.wrapper {
+    /* min-height: 100%; */
+    display: flex;
+    flex-direction: column;
+}
+
 .header__container {
     padding: 1em;
     text-align: center;
@@ -32,12 +39,16 @@ h1 {
     font-size: 2rem;
 }
 
+.main {
+    flex: 1 1 auto;
+}
+
 .main__container {
     padding: 0 1em;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 9.3125em);
+    /* height: calc(100vh - 9.3125em); */
 }
 
 .slider {
@@ -178,7 +189,7 @@ h1 {
 
 @media (max-width: 767px) {
     .main__container {
-        height: calc(100vh - 7.3125em);
+        /* height: calc(100vh - 7.3125em); */
     }
     .header__container {
         padding: .5em;
